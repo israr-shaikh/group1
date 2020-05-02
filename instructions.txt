@@ -1,0 +1,12 @@
+react-router-dom
+axios
+
+
+getProductList - API
+
+https://api.hnrretail.com/products?tags=homepage
+
+
+getProduct - API
+
+https://api.hnrretail.com/products/{productId}
