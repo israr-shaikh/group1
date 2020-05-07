@@ -5,6 +5,10 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #0f2027; /* fallback for old browsers */
-    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    background: rgb(15, 32, 39); /* fallback for old browsers */
+    background:white;
+  };
+
+  .Container{
+    background-color:red;
   }

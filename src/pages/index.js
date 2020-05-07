@@ -1,5 +1,5 @@
 import React from "react"
 import '../../App.css';
-import ProductList from './Screens/ProductList'
+import App from './Screens/ProductDetails'
 
-export default ProductList
+export default App
