@@ -13,8 +13,6 @@ body {
     padding-top:10px;
     padding-right: 10px;
     padding-left:10px;
-   
-    
   }
 .row {
   display: flex;
@@ -22,8 +20,6 @@ body {
   margin-top: 20px;
   flex-wrap:wrap;
 }
-
-
 .productname{
   text-align:right;
   width: 250px;
@@ -37,10 +33,7 @@ body {
   line-height: 27px;
   font-family: PTSansBold;
   letter-spacing: .025em;
-
-    
 }
-
 .search{
     left: 35%;
     top: 25%;
