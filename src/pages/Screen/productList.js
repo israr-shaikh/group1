@@ -5,8 +5,14 @@ import Header from "./header";
 
 
 
-function ProductList() {
+
+
+
+function ProductList(props) {
   const [user, setUser] = useState([]);
+  
+
+
   
   useEffect(() => {
     axios
@@ -17,10 +23,10 @@ function ProductList() {
      
   },[]);
   
-  
+ 
 //console.log(user)
   return (
-  
+    
     <div>
     <Header/>
     <div class="row">
@@ -31,7 +37,7 @@ function ProductList() {
         
         <table> 
           <tr>
-         <td> <img className="column" src={"//"+items.images[0].url} height="300" width="300"></img>
+         <td> <img className="column" src={"//"+items.images[0].url} height="300" width="300"  ></img>
           <br></br>
           <br></br>
           <div class="productname">{items.name.en}></div>
@@ -46,6 +52,7 @@ function ProductList() {
     </div>
    
   );
+  
 }
 
 export default ProductList;
