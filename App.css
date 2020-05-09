@@ -21,18 +21,19 @@ body {
   flex-wrap:wrap;
 }
 .productname{
-  text-align:right;
-  width: 250px;
+  text-align:center;
+  width: 300px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-all;
   font-weight: 700;
   text-decoration: none;
   color: #7b7b7b;
-  font-size: 25px;
-  line-height: 27px;
+  font-size: 20px;
+  line-height: 20px;
   font-family: PTSansBold;
   letter-spacing: .025em;
+  
 }
 .search{
     left: 35%;
