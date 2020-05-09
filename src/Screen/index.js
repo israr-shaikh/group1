@@ -20,6 +20,7 @@ class home extends Component {
               exact
               path="/productDetail/:productId"
             />
+            <Route component={ProductList} exact path="/productDetail/" />
           </Switch>
         </Router>
       </div>

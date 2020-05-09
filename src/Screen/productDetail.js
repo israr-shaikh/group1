@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
 import axios from "axios"
-import "../../../App.css"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,8 +22,8 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     flexGrow: 1,
-    flexWrap:'wrap',
-    flexDirection:'row',
+    flexWrap: "wrap",
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -46,13 +45,13 @@ export default function ProductDetails(props) {
         console.log(error)
       })
   }, [])
-  
+
   let { brand, display_name, pricing, short_desc, images } = product
   if (isLoading) {
     return <div>Loading...</div>
   }
   return (
-    <div style={{flexDirection:'row',alignItems:'center'}}>
+    <div style={{ flexDirection: "row", alignItems: "center" }}>
       <Grid item xs={12} sm={6}>
         <Paper className={classes.paper}>
           <CardActionArea>
@@ -80,7 +79,6 @@ export default function ProductDetails(props) {
           </CardContent>
         </Paper>
       </Grid>
-     
     </div>
   )
 }
