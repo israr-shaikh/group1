@@ -11,6 +11,7 @@ function ProductList(props) {
       .then(result => setUser(result.data.items))
       .catch(err => console.log(err))
   }, [])
+  
   return (
     <div>
       <div class="row">
@@ -23,9 +24,10 @@ function ProductList(props) {
               <tr>
                 <td>
                   {" "}
-                  <img
+                  <img role
                     className="column"
                     src={"//" + items.images[0].url}
+                   
                     height="300"
                     width="300"
                   ></img>
