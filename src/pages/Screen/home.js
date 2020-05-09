@@ -1,42 +1,30 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route ,NavLink} from "react-router-dom";
-import Header from "./header";
-import ProductList from "./productList";
-import ProductDetails from "./productDetail";
+import React, { Component } from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Header from "./header"
+import ProductList from "./productList"
+import ProductDetails from "./productDetail"
 
-
- class home extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-    <div>
-         <nav>
-          <ul>
-            <li>
-              <NavLink activeStyle={{ color: "white" }} to="/productList">
-                ProductList
-              </NavLink>
-            </li>
-            <li>
-              <NavLink activeStyle={{ color: "red" }} to="/productDetail">
-                ProductDetail
-              </NavLink>
-            </li>
-        </ul>
-        </nav>
-
+class home extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div>
+        <Header />
         <Router>
           <Switch>
-            <Route component={ProductList} exact path="/productList" />
-            <Route component={ProductDetails} exact path="/productDetail" />
-            </Switch>
+            <Route component={ProductList} exact path="/" />
+            <Route
+              component={ProductDetails}
+              exact
+              path="/productDetail/:productId"
+            />
+          </Switch>
         </Router>
-                
-            </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 
-export default home;
+export default home
