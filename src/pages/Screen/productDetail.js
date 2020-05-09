@@ -49,6 +49,7 @@ export default function ProductDetails(props) {
         console.log(error)
       })
   }, [])
+  
   let { brand, display_name, pricing, short_desc, images } = product
   if (isLoading) {
     return <div>Loading...</div>
