@@ -22,10 +22,12 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
   },
   root: {
-    maxWidth: 500,
+    maxWidth: 420,
   },
   container: {
     flexGrow: 1,
+    flexWrap:'wrap',
+    flexDirection:'row',
     alignItems: "center",
     justifyContent: "center",
   },
@@ -52,36 +54,35 @@ export default function ProductDetails(props) {
     return <div>Loading...</div>
   }
   return (
-    <div className={classes.container}>
+    <div style={{flexDirection:'row',alignItems:'center'}}>
       <Grid item xs={12} sm={6}>
         <Paper className={classes.paper}>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Contemplative Reptile"
-                height="360"
-                image={"//" + images[0].url}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  {brand}
-                </Typography>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {display_name.en}
-                </Typography>
-                <Typography gutterBottom variant="h5" component="h1">
-                  {pricing.currency} {pricing.list}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  {short_desc.en}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              height="500"
+              image={"//" + images[0].url}
+              title="Contemplative Reptile"
+            />
+          </CardActionArea>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h1">
+              {brand}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h2">
+              {display_name.en}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h1">
+              {pricing.currency} {pricing.list}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {short_desc.en}
+            </Typography>
+          </CardContent>
         </Paper>
       </Grid>
+     
     </div>
   )
 }
