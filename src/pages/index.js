@@ -6,6 +6,6 @@ import Header from './Screen/header'
 import home from "./Screen/home";
 
 //export default Header;
-export default ProductList;
+export default home;
 //export default home;
 
